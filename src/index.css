@@ -64,10 +64,20 @@ p {
 }
 
 .titleFooter {
+    font-family: 'Pacifico';
     font-size: 23px;
     margin: 0, 100%;
 }
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #000000;
+    z-index: 50;
+    margin-top: 100px;
+    position: sticky;
+    clear: both;
 
+}
 img {
     max-width: 250px;
 }
