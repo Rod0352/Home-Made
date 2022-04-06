@@ -42,10 +42,10 @@ p {
 }
 
 .aboutTitle {
-    border: 3px;
+    border-radius: 15px;
     border-style: dotted;
     border-color: orange;
-    border-width: 5px;
+    border-width:5px;
     padding: 10px;
     margin-left: 40%;
     margin-right: 40%;
@@ -54,10 +54,9 @@ p {
 }
 
 .title {
-    border: 3px;
-    border-style: dotted;
+    border-bottom-style: dotted;
+    border-bottom-width: 5px;
     border-color: orange;
-    border-width: 5px;
     padding: 10px;
     margin-left: 35%;
     margin-right: 35%;

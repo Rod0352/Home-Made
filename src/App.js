@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Food from "./components/Food";
 import Sidebar from './components/sidebar';
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -35,6 +36,7 @@ function App() {
          navItems={navItems}
         />
       {currentNavItem.name === "About" && <About></About>}
+      {currentNavItem.name === "Food" && <Food></Food>}
       </main>
       <Footer></Footer>
     </Router>

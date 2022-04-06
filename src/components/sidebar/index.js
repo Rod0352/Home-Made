@@ -2,14 +2,14 @@ import React from 'react';
 import {
   CDBSidebar,
   CDBSidebarContent,
-  CDBSidebarFooter,
   CDBSidebarHeader,
   CDBSidebarMenu,
   CDBSidebarMenuItem,
 } from 'cdbreact';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+  const { currentNavItem, setCurrentNavItem, navItems = [] } = props;
   return (
     <div style={{ display: 'flex', height: '100%', overflow: 'scroll initial' }}>
       <CDBSidebar textColor="#FF8000" backgroundColor="#333">
@@ -21,31 +21,29 @@ const Sidebar = () => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <a href='/components/About' activeclassname="activeClicked">
-              <CDBSidebarMenuItem icon="columns">About</CDBSidebarMenuItem>
-            </a>
-            {/* <NavLink exact to="/Food" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="table">Food</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to="/Hygiene" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="user">Hygiene</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to="/Apperal" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="chart-line">Apperal</CDBSidebarMenuItem>
-            </NavLink> */}
+          <ul>
+            {navItems.map((navItem) => (
+              <li
+                className={`navItem ${
+                  currentNavItem.name === navItem.name && `navActive`
+                }`}
+                key={navItem.name}
+              >
+                <a href={`#${navItem.name}`}
+                  onClick={() => {
+                    setCurrentNavItem(navItem);
+                  }}
+                >
+                 <CDBSidebarMenuItem > {navItem.name}</CDBSidebarMenuItem>
+                </a>
+              </li>
+            ))}
+          </ul>
+            
 
           </CDBSidebarMenu>
         </CDBSidebarContent>
 
-        {/* <CDBSidebarFooter style={{ textAlign: 'center' }}>
-          <div
-            style={{
-              padding: '20px 5px',
-            }}
-          >
-            Home Made
-          </div>
-        </CDBSidebarFooter> */}
       </CDBSidebar>
     </div>
   );
