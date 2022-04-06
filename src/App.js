@@ -1,7 +1,10 @@
 import React,{useState} from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import About from "./components/About"
+import About from "./components/About";
+import Sidebar from './components/sidebar';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import './App.css';
 import './index.css';
 
@@ -23,13 +26,18 @@ function App() {
   const [currentNavItem, setCurrentNavItem] = useState(navItems[0]);
 
   return (
-    <>
+    <Router>
       <Header></Header>
       <main>
+        <Sidebar 
+         currentNavItem={currentNavItem}
+         setCurrentNavItem={setCurrentNavItem}
+         navItems={navItems}
+        />
       {currentNavItem.name === "About" && <About></About>}
       </main>
       <Footer></Footer>
-    </>
+    </Router>
   );
 }
 

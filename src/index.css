@@ -6,21 +6,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-h1{
-    font-family: 'Pacifico',cursive;
 }
-p{
+main{
+    display: flex;
+
+}
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+p {
     color: orange;
 }
-.about{
+
+.about {
     border: 3px;
     border-style: dotted;
     border-color: orange;
     background-color: black;
+    margin: 5%;
 }
-.card-title{
+
+.sidenav {
+    width: '25%';
+    padding-top: '20px';
+}
+
+.card-title {
     border: 3px;
     border-style: dotted;
     border-color: orange;
@@ -28,30 +40,34 @@ p{
     margin-right: 190px;
     color: orange;
 }
-.aboutTitle{
+
+.aboutTitle {
     border: 3px;
     border-style: dotted;
     border-color: orange;
     border-width: 5px;
     padding: 10px;
-    margin-left: 390px;
-    margin-right: 390px;
+    margin-left: 40%;
+    margin-right: 40%;
     margin-bottom: 70px;
 
 }
-.title{
+
+.title {
     border: 3px;
     border-style: dotted;
     border-color: orange;
     border-width: 5px;
     padding: 10px;
-    margin-left: 290px;
-    margin-right: 290px
+    margin-left: 35%;
+    margin-right: 35%;
 }
-.titleFooter{
+
+.titleFooter {
     font-size: 23px;
     margin: 0, 100%;
 }
-img{
-       max-width: 250px;
+
+img {
+    max-width: 250px;
 }
