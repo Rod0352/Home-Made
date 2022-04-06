@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+h1{
+    font-family: 'Pacifico',cursive;
+}
+p{
+    color: orange;
+}
+.card-title{
+    border: 3px;
+    border-style: dotted;
+    border-color: orange;
+    margin-left: 190px;
+    margin-right: 190px;
+    color: orange;
+}
+.title{
+    border: 3px;
+    border-style: dotted;
+    border-color: orange;
+    border-width: 5px;
+    padding: 10px;
+    margin-left: 290px;
+    margin-right: 290px
+}
+.titleFooter{
+    font-size: 23px;
+    margin: 0, 100%;
+}
+img{
+       max-width: 250px;
 }

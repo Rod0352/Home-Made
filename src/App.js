@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React,{useState} from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import About from "./components/About"
 import './App.css';
+import './index.css';
 
 function App() {
+  const [navItems] = useState([
+    {
+      name: "About",
+    },
+    {
+      name: "Food",
+    },
+    {
+      name: "Hygiene",
+    },
+    {
+      name: "Apperal",
+    },
+  ]);
+  const [currentNavItem, setCurrentNavItem] = useState(navItems[0]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+      <main>
+      {currentNavItem.name === "About" && <About></About>}
+      </main>
+      <Footer></Footer>
+    </>
   );
 }
 
