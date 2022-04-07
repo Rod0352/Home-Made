@@ -1,6 +1,6 @@
 import React from "react";
 
-function Food() {
+function Hygiene() {
 
   return (
     <>
@@ -49,4 +49,4 @@ function Food() {
   );
 }
 
-export default Food;
+export default Hygiene;

@@ -4,7 +4,7 @@
 * {
     background-color: black;
     margin: 0;
-    padding: 0;
+    padding: 0, 20px;
     box-sizing: border-box;
 }
 main{
@@ -20,26 +20,31 @@ p {
 }
 
 .about {
-    border: 3px;
+    border: 5px;
     border-style: dotted;
     border-color: orange;
     background-color: black;
     margin: 5%;
 }
+/* .aboutText{
 
+} */
 .sidenav {
     width: '25%';
     padding-top: '20px';
 }
-
-.card-title {
+.addForm{
+    /* width: 80%; */
+    color: orange;
+}
+/* .card-title {
     border: 3px;
     border-style: dotted;
     border-color: orange;
     margin-left: 190px;
     margin-right: 190px;
     color: orange;
-}
+} */
 
 .aboutTitle {
     border-radius: 15px;
@@ -50,6 +55,7 @@ p {
     margin-left: 40%;
     margin-right: 40%;
     margin-bottom: 70px;
+    color: orange;
 
 }
 
@@ -61,20 +67,26 @@ p {
     margin-left: 35%;
     margin-right: 35%;
 }
+.card{
+    margin-left: 9px;
+}
 
 .titleFooter {
     font-family: 'Pacifico';
-    font-size: 23px;
-    margin: 0, 100%;
+    font-size: 15px;
+    width: 100%;
+    /* margin: 0, 100%; */
 }
 footer{
-    width: 100%;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    height: 19%;
     background-color: #000000;
-    z-index: 50;
-    margin-top: 100px;
-    position: sticky;
-    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    bottom: 0px;
 
 }
 img {
