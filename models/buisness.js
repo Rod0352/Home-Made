@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const buisnessSchema = new Schema({
     // user: [
@@ -50,8 +50,9 @@ const buisnessSchema = new Schema({
 });
 
 // buisnessSchema.index({ createdAt: 1, updatedAt: 1 });
+const Buisness = model('Buisness', buisnessSchema);
 
 
- module.exports = buisnessSchema;
+ module.exports = Buisness;
 
  

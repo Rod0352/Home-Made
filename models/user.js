@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 // import schema from buisness.js
-const buisnessSchema = require('./buisness');
+const buisnessSchema = require('./Buisness');
 
 const userSchema = new Schema(
   {
@@ -22,7 +22,7 @@ const userSchema = new Schema(
       required: true,
     },
     // set savedbuisnesss to be an array of data that adheres to the buisnessSchema
-    savedbuisnesss: [buisnessSchema],
+    // savedbuisnesss: [buisnessSchema],
   },
   // set this to use virtual below
   {

@@ -2,11 +2,11 @@
    
     {
       "buisnessId": "1",
-      "buisnessName": "Lastinng Finish",
+      "buisnessName": "Lasting Finish",
       "buisnessOwner": "Rodney",
       "email": "rodney@email.com",
       "cost": 2,
-      "description": "super nice",
+      "description": "super nice"
 
     },
     {
@@ -15,7 +15,7 @@
         "buisnessOwner": "amy",
         "email": "amy@email.com",
         "cost": 3,
-        "description": "amazing!!!",
+        "description": "amazing!!!"
   
       },
       {
@@ -24,9 +24,9 @@
         "buisnessOwner": "Kronos",
         "email": "kronos@email.com",
         "cost": 2,
-        "description": "Not bad!!",
+        "description": "Not bad!!"
   
-      },
+      }
        
     
   ]
