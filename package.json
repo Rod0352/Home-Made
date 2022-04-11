@@ -1,0 +1,20 @@
+{
+  "name": "home-made",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rod0352/Home-Made.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rod0352/Home-Made/issues"
+  },
+  "homepage": "https://github.com/Rod0352/Home-Made#readme"
+}

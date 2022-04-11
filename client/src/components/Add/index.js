@@ -20,7 +20,7 @@ function Add() {
                 </div>
                 <div class="col-12">
                     <label for="description" class="form-label">Describe your buisness</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"></input>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Brief description for your buisness"></input>
                 </div>
                 <div class="col-md-6">
                     <label for="inputCity" class="form-label">City</label>
