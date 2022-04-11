@@ -17,8 +17,14 @@ h1 {
 
 p {
     color: orange;
+    /* padding-left: 7%; */
 }
-
+.p {
+    color: orange;
+    font-size: 19px;
+    font-style: 'Pacifico', cursive;
+    /* padding-left: 7%; */
+}
 .about {
     border: 5px;
     border-style: dotted;
@@ -90,5 +96,21 @@ footer{
 
 }
 img {
-    max-width: 250px;
+    width:250px;
+    height: auto;
+
 }
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main {
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 50px 10px;
+  }
+  .card {
+    width: 25%;
+    text-align: center;
+    margin: 25px;
+  }  

@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Food from "./components/Food";
 import Add from "./components/Add";
+import Apperal from "./components/Apperal"
 import Hygiene from "./components/Hygiene";
 import Sidebar from './components/sidebar';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -44,6 +45,7 @@ function App() {
       {currentNavItem.name === "Food" && <Food></Food>}
       {currentNavItem.name === "Add A Buisness" && <Add></Add>}
       {currentNavItem.name === "Hygiene" && <Hygiene></Hygiene>}
+      {currentNavItem.name === "Apperal" && <Apperal></Apperal>}
       </main>
       {/* <Footer></Footer> */}
     </Router>
