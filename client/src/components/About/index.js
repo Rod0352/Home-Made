@@ -2,9 +2,9 @@ import React from "react";
 
 function About() {
     return (
-        <div className="container">
-            <h1 className="card-title text-center aboutTitle">About</h1>
-            <div className="card mb-3 about" >
+        <div >
+            <h1 className="card-title text-center aaboutTitle">About</h1>
+            <div className=" mb-3 about" >
                 <div className="row g-0 aboutText">
                     <div className="col-md-3">
                         <img
@@ -15,7 +15,7 @@ function About() {
                         <div className="card-body text-center">
                             <br></br>
                             <br></br>
-                            <p className="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <p className="card-text intro">Hello and welcome! Our team here at 'Home Made' care deeply for our african american community and our initiative is to bring better support to it. Home Made is an application that aims to connect users with black-owned buisness's to help the community thrive. You can view a  buisness by different categories such as food, hygiene, etc. If you are a black-buisness owner yourself please refer to the 'add a buisness' tab to add your buisness to our roster to get some exposer!
                             </p>
                         </div>
                     </div>
