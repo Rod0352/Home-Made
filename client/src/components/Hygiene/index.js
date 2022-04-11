@@ -12,7 +12,7 @@ function Hygiene() {
   const [restaurants] = useState([
     {
       name: 'Santarellis Barbershop',
-      url: 'santarellisbarbershop.com',
+      url: 'https://santarellisbarbershop.com',
       image: hygiene1,
       description: 'Santarellis Barbershop has been a prominent barbershop in the Columbus neighborhood of Clintonville since 1984. '
     },

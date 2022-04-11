@@ -40,14 +40,14 @@ function App() {
          currentNavItem={currentNavItem}
          setCurrentNavItem={setCurrentNavItem}
          navItems={navItems}
-         />
+        />
       {currentNavItem.name === "About" && <About></About>}
       {currentNavItem.name === "Food" && <Food></Food>}
       {currentNavItem.name === "Add A Buisness" && <Add></Add>}
       {currentNavItem.name === "Hygiene" && <Hygiene></Hygiene>}
       {currentNavItem.name === "Apperal" && <Apperal></Apperal>}
       </main>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </Router>
   );
 }
