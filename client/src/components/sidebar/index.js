@@ -6,7 +6,7 @@ import {
   CDBSidebarMenu,
   CDBSidebarMenuItem,
 } from 'cdbreact';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = (props) => {
   const { currentNavItem, setCurrentNavItem, navItems = [] } = props;
@@ -22,22 +22,30 @@ const Sidebar = (props) => {
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
           <ul>
-            {navItems.map((navItem) => (
-              <li
-                className={`navItem ${
-                  currentNavItem.name === navItem.name && `navActive`
-                }`}
-                key={navItem.name}
-              >
-                <a href={`#${navItem.name}`}
-                  onClick={() => {
-                    setCurrentNavItem(navItem);
-                  }}
-                >
-                 <CDBSidebarMenuItem > {navItem.name}</CDBSidebarMenuItem>
-                </a>
-              </li>
-            ))}
+                
+            <CDBSidebarMenuItem>
+              <NavLink to="/about">About</NavLink>
+            </CDBSidebarMenuItem>
+                
+                
+            <CDBSidebarMenuItem>
+               <NavLink to="/food">Food</NavLink>
+            </CDBSidebarMenuItem>
+               
+                
+            <CDBSidebarMenuItem>
+              <NavLink to="/add-a-business">Add a Business</NavLink>
+            </CDBSidebarMenuItem>
+                
+                
+            <CDBSidebarMenuItem>
+                <NavLink to="/hygiene">Hygiene</NavLink>
+             </CDBSidebarMenuItem>
+              
+                
+            <CDBSidebarMenuItem>
+              <NavLink to="/apparel">Apparel</NavLink>
+            </CDBSidebarMenuItem>   
           </ul>
             
 
