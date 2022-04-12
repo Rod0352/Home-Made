@@ -1,12 +1,13 @@
 import { gql } from '@apollo/client';
 
 export const  QUERY_BUSINESSES = gql`
-query  buisness{
+ { buisness {
     buisnessName
     buisnessOwner
     email
     cost
     description
   }
+}
 `
 
