@@ -10,7 +10,7 @@ import food6 from '../../assets/food/food6.png';
 
 
 
-function Food() {
+function Apperal() {
   const [restaurants] = useState([
     {
       name: 'Best Kept Secret Bar & Entertainment',
@@ -70,4 +70,4 @@ function Food() {
   );
 }
 
-export default Food;
+export default Apperal;

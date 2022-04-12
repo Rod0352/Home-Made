@@ -4,11 +4,12 @@
 * {
     background-color: black;
     margin: 0;
-    padding: 0, 20px;
+    padding: 0;
     box-sizing: border-box;
 }
 main{
     display: flex;
+    justify-content:space-between;
 
 }
 h1 {
@@ -17,26 +18,33 @@ h1 {
 
 p {
     color: orange;
+    padding-left: 7%;
+    padding-bottom: 7px;
 }
-
+.p {
+    color: orange;
+    font-size: 19px;
+    font-style: 'Pacifico', cursive;
+    /* padding-left: 7%; */
+}
 .about {
-    border: 5px;
+    border-radius: 15px;
+    border: 3px;
     border-style: dotted;
     border-color: orange;
     background-color: black;
     margin: 5%;
 }
-/* .aboutText{
-
-} */
+.intro{
+    font-size: 23px;
+    /* font-family: 'Pacifico'; */
+    font-weight: 40;
+}
 .sidenav {
     width: '25%';
     padding-top: '20px';
 }
-.addForm{
-    /* width: 80%; */
-    color: orange;
-}
+
 /* .card-title {
     border: 3px;
     border-style: dotted;
@@ -46,16 +54,17 @@ p {
     color: orange;
 } */
 
-.aboutTitle {
+.aaboutTitle {
     border-radius: 15px;
     border-style: dotted;
     border-color: orange;
+    color: orange;
     border-width:5px;
     padding: 10px;
     margin-left: 40%;
     margin-right: 40%;
     margin-bottom: 70px;
-    color: orange;
+    position:sticky;
 
 }
 
@@ -67,28 +76,62 @@ p {
     margin-left: 35%;
     margin-right: 35%;
 }
-.card{
-    margin-left: 9px;
-}
 
 .titleFooter {
     font-family: 'Pacifico';
-    font-size: 15px;
-    width: 100%;
-    /* margin: 0, 100%; */
+    font-size: 23px;
+    margin: 0, 100%;
 }
 footer{
-    display: flex;
-    justify-content: center;
-    font-size: 15px;
-    height: 19%;
+    width: 100%;
+    height: 200px;
     background-color: #000000;
-    margin-left: auto;
-    margin-right: auto;
-    position: fixed;
-    bottom: 0px;
+    z-index: 50;
+    margin-top: 100px;
+    position: sticky;
+    clear: both;
 
 }
 img {
-    max-width: 250px;
+    width:250px;
+    height: auto;
+
 }
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main {
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 50px 10px;
+  }
+  .card {
+    width: 25%;
+    text-align: center;
+    margin: 25px;
+    
+  }  
+  .add{
+    color: orange;
+  }
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+      
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    text-decoration-color: orange; 
+ }
+  
+  a:active {
+    text-decoration: none;
+  }
+  /* button{
+      height: 5px ;
+  } */

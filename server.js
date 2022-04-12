@@ -1,43 +1,29 @@
-// import proper dependcies
 const express = require("express");
-const path = require("path");
-const db = require("./config/connection");
-const { ApolloServer } = require("apollo-server-express");
+const logger = require("morgan");
+const mongoose = require("mongoose");
+const compression = require("compression");
 
-// //import typeDefs and resolvers
-const { typeDefs, resolvers } = require("./schemas");
-const { authMiddleware } = require("./utils/auth");
+const PORT = process.env.PORT || 3001;
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/home-made";
 
 const app = express();
-const PORT = process.env.PORT || 3001;
 
+app.use(logger("dev"));
 
-
-//create new Apollo server and pass in schema data
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: authMiddleware,
-});
-
-//integrate Apollo server with Express as middleware
-server.applyMiddleware({ app });
-
-
+app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// if in production, serve client/build as static assets
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
-}
+// app.use(express.static("Develop/public"));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+mongoose.connect(MONGODB_URI, {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
 });
 
-// app.use(routes);
-
-db.once("open", () => {
-  app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
+// routes
+app.use(require("./Develop/routes/api"));
+app.listen(PORT, () => {
+    console.log(`App running on port ${PORT}!`);
 });
