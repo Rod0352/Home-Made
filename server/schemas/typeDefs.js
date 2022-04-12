@@ -29,7 +29,7 @@ type Buisness{
     description:String
  }
  type Query{
-    buisness: Buisness
+    buisness: [Buisness]
     me: User
 }
 type Mutation {

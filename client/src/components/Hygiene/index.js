@@ -5,10 +5,16 @@ import hygiene1 from '../../assets/hygiene/hygiene1.png';
 import hygiene2 from '../../assets/hygiene/hygiene2.png';
 import hygiene3 from '../../assets/hygiene/hygiene3.png';
 import hygiene4 from '../../assets/hygiene/hygiene4.png';
+import  {useQuery} from '@apollo/client';
+import {QUERY_BUSINESSES} from '../../utils/queries';
 
 
 
 function Hygiene() {
+  const { data} = useQuery(QUERY_BUSINESSES);
+  if(data){
+    console.log(data);
+  }
   const [restaurants] = useState([
     {
       name: 'Santarellis Barbershop',
@@ -35,24 +41,26 @@ function Hygiene() {
       description: 'Stop in to check out our barbers. We offer everything you want from a barbershop. From a hot towel shave and facial. To fades, tapers, mohawks, combovers, razor fades, and custom hair art known as Designs',
     }
   ]);
-  return (
-    <>
-      <div className="container  flex-row mx-4">
-        {restaurants.map((restaurant, i) => (
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={restaurant.image} key={restaurant.name} />
-            <Card.Body>
-              <Card.Title className='p'>{restaurant.name}</Card.Title>
-              <Card.Text >
-                {restaurant.description}
-              </Card.Text>
-              <Button href={restaurant.url} target="blank">Check it Out!</Button>
-            </Card.Body>
-          </Card>
-        ))}
-      </div>
 
-    </>
+
+  return (<div>hi</div>
+    // <>
+    //   <div className="container  flex-row mx-4">
+    //     {restaurants.map((restaurant, i) => (
+    //       <Card style={{ width: '18rem' }}>
+    //         <Card.Img variant="top" src={restaurant.image} key={restaurant.name} />
+    //         <Card.Body>
+    //           <Card.Title className='p'>{restaurant.name}</Card.Title>
+    //           <Card.Text >
+    //             {restaurant.description}
+    //           </Card.Text>
+    //           <Button href={restaurant.url} target="blank">Check it Out!</Button>
+    //         </Card.Body>
+    //       </Card>
+    //     ))}
+    //   </div>
+
+    // </>
   );
 }
 
