@@ -42,7 +42,7 @@ app.get("*", (req, res) => {
 // app.use(routes);
 
 db.once("open", () => {
-  app.listen(3001, () => {
+  app.listen(process.env.PORT || 3001, () => {
     console.log(`🚀 Server ready at http://localhost:3001${server.graphqlPath}`);
   });
 });
