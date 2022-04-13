@@ -43,24 +43,24 @@ function Hygiene() {
   ]);
 
 
-  return (<div>hi</div>
-    // <>
-    //   <div className="container  flex-row mx-4">
-    //     {restaurants.map((restaurant, i) => (
-    //       <Card style={{ width: '18rem' }}>
-    //         <Card.Img variant="top" src={restaurant.image} key={restaurant.name} />
-    //         <Card.Body>
-    //           <Card.Title className='p'>{restaurant.name}</Card.Title>
-    //           <Card.Text >
-    //             {restaurant.description}
-    //           </Card.Text>
-    //           <Button href={restaurant.url} target="blank">Check it Out!</Button>
-    //         </Card.Body>
-    //       </Card>
-    //     ))}
-    //   </div>
+  return (
+    <>
+      <div className="container  flex-row mx-4">
+        {restaurants.map((restaurant, i) => (
+          <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={restaurant.image} key={restaurant.name} />
+            <Card.Body>
+              <Card.Title className='p'>{restaurant.name}</Card.Title>
+              <Card.Text >
+                {restaurant.description}
+              </Card.Text>
+              <Button href={restaurant.url} target="blank">Check it Out!</Button>
+            </Card.Body>
+          </Card>
+        ))}
+      </div>
 
-    // </>
+    </>
   );
 }
 
