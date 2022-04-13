@@ -10,4 +10,4 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/homemade', {
 });
 mongoose.connection.once('open', () => console.log(`Connected to mongo at ${url}`));
 
-module.exports = mongoose.connect;
+module.exports = mongoose.connection;

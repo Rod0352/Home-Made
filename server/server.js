@@ -1,12 +1,17 @@
 // import proper dependcies
 const express = require("express");
+const mongoose = require("mongoose");
 const path = require("path");
 const db = require("./config/connection");
 const { ApolloServer } = require("apollo-server-express");
 
+// const models = require('./models')
+
 // //import typeDefs and resolvers
 const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
+const { config } = require("process");
+// const { Mongoose } = require("mongoose");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -15,11 +20,12 @@ const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: authMiddleware,
+  context: config,
 });
 
 //integrate Apollo server with Express as middleware
 server.applyMiddleware({ app });
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -36,5 +42,7 @@ app.get("*", (req, res) => {
 // app.use(routes);
 
 db.once("open", () => {
-  app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
+  app.listen(3001, () => {
+    console.log(`🚀 Server ready at http://localhost:3001${server.graphqlPath}`);
+  });
 });
