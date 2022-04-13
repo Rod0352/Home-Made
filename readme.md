@@ -21,7 +21,7 @@
 <br />
 This application is covered by the ISC license. 
 ## contribution
- Students of OSU Coding Bootcamp
+ Students of OSU Coding Bootcamp (Shy-7)
 ## Test
 ![Search Book](/screenshot/app.jpg?raw=true "Screenshot")
 ## Questions
