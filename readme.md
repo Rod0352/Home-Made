@@ -13,7 +13,7 @@
 - [Test](#test)
 - [Questions](#questions)
 ## Installation
- npm i in the respective directorys or follow our link to the deployed page! : https://quiet-dawn-67392.herokuapp.com/
+ npm i then npm run develop or follow our link to the deployed page! : https://quiet-dawn-67392.herokuapp.com/
 ## Usage
  refer to installation process
 ## License
